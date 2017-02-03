@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DS</title>
+
+  <script type="text/javascript" src="static/jquery/1.7.1/jquery-1.7.1.min.js"></script>
+
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+  <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>  
+
+  <script type="text/javascript" src="static/linkify/1.0/jquery.linkify-1.0-min.js"></script>  
+
+  
+  <link rel="stylesheet" href="static/jquery-ui-1.8.18.custom/jquery-ui-1.8.18.custom.css">
+  <script type="text/javascript" src="static/jquery-ui-1.8.18.custom/jquery-ui-1.8.18.custom.min.js"></script>
+  <script type="text/javascript" src="static/rison.js"></script>
+
+  <script type="text/javascript" src="static/jquery.iframetracker.js"></script>
+
+  <script type="text/javascript" src="static/highlight.js"></script>
+  <script type="text/javascript" src="static/custom/jquery.facetview.js"></script>
+
+  <link rel="stylesheet" href="css/facetview.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Load c3.css -->
+  <link href="static/c3-0.4.10/c3.css" rel="stylesheet" type="text/css">
+
+  <!-- Load d3.js and c3.js -->
+  <script src="static/d3-3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src="static/c3-0.4.10/c3.min.js"></script>
+
+  <script type="text/javascript">
+jQuery(document).ready(function($) {
+  $('.facet-view-simple').facetview({
+    // "search_url": 'http://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/search-analytics/_search?',
+    "search_url": 'http://localhost:9200/search-analytics/_search?',
+    "search_index": 'elasticsearch',
+    "datatype": 'json',
+    "facets": [
+        {'field':'org', 'display':'Agency'},
+        {'field':'type', 'display':'Type'},
+        {'field':'effective_year', 'display':'Award Effective Year'},
+        // {'field':'primary_program_unanalyzed', 'display':'Agency'}, // not there
+        {'field':'FundingOpportunityTitle_unanalyzed', 'display':'Funding Opportunity'},
+        {'field':'institution_country', 'display':'Awarded Institution Country'},
+        {'field':'institution_state_abbr', 'display':'Awarded Institution State'},
+        {'field':'award_title_unanalyzed', 'display':'Award Title'},
+        {'field':'investigator_fullname', 'display':'Investigator'},
+        {'field':'institution_name', 'display':'Institution'},
+        {'field':'fund_program_name_unanalyzed', 'display':'Funding Program Name'},
+        {'field':'award_instrument_value', 'display':'Award Instrument'}
+    ],
+    paging: {
+        from: 0,
+        size: 10
+    },
+    // "linechart_field"  : "award_effective_date",
+    // "dendrogram_field" : "authors", 
+    "display_images" : false,
+    "result_display_1" : [
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Funding Opportunity: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "FundingOpportunityTitle_unanalyzed",
+            "post" : "</span><br>"
+          }
+        ],
+        // [
+        //   {
+        //     "pre" : '<b style="display:inline-block; width: 150px; float:left;">Fund Program: </b><span style="display:inline-block; width: 700px; float: left;">',
+        //     "field" : "fund_program_name",
+        //     "post" : "</span><br>"
+        //   }
+        // ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Program URL: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "program_url",
+            "post" : '</span><br>'
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Program Officer: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "program_officer",
+            "post" : '</span><br><hr style="display:inline-block; width: 850px; float:left; height: 1px; margin-top: 2px; margin-bottom: 2px;">'
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Awarded Institution: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "institution_name",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Institution City: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "institution_city_name",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Institution State: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "institution_state",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Institution Country: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "institution_country",
+            "post" : '</span><br><hr style="display:inline-block; width: 850px; float:left; height: 1px; margin-top: 2px; margin-bottom: 2px;">'
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Investigator: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "investigator_fullname",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Investigator Email: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "investigator_email",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Investigator Start Date: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "investigator_start_date",
+            "post" : '</span><br><hr style="display:inline-block; width: 850px; float:left; height: 1px; margin-top: 2px; margin-bottom: 2px;">'
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Award Effective: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "award_effective_date",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Award Expiration: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "award_expiration_date",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;"> Award Instrument: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "award_instrument_value",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;"> Award Amount: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "award_amount",
+            "post" : '</span><br><hr style="display:inline-block; width: 850px; float:left; height: 1px; margin-top: 2px; margin-bottom: 2px;">'
+          }
+        ],
+        [
+          {
+            "pre" : "<br><br><b>Abstract</b><br>",
+            "field" : "abstract",
+            "post" : ""
+          }
+        ]
+    ],
+    "result_display_2" : [
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Opening Date: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "OpeningDate",
+            "post" : '</span><br>'
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Closing Date: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "ClosingDate",
+            "post" : '</span><br><hr style="display:inline-block; width: 850px; float:left; height: 1px; margin-top: 2px; margin-bottom: 2px;">'
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Multi-Project? </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "IsMultiProject",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : '<b style="display:inline-block; width: 150px; float:left;">Agency Contact Info: </b><span style="display:inline-block; width: 700px; float: left;">',
+            "field" : "AgencyContactInfo",
+            "post" : "</span><br>"
+          }
+        ],
+        [
+          {
+            "pre" : "<br><br><b>Abstract</b><br>",
+            "field" : "abstract",
+            "post" : ""
+          }
+        ]
+    ],
+    "linkify" : true
+    }
+  );
+$('.facetview_filtershow' ).trigger( "click" );
+});
+
+
+// jOWL.load("static/matr.owl", function(){
+//   jOWL.SPARQL_DL("ObjectProperty(?x)").execute({
+//     onComplete: function(results){
+//       console.log(results)
+//     }
+//   })
+
+
+
+
+  </script>
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">FacetView</a>
+      <ul class="nav">
+        <li><a href="http://github.com/darth-pr/facetview">Github</a></li>
+        <li><a href="http://github.com/darth-pr/facetview/issues">Issues</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container"> 
+  <div class="content">
+    <div class="page-header">
+      <h1>
+      Search Analytics: Solicitations and Awards
+      </h1>
+    </div>
+
+    <div class="facet-view-simple"></div>
+
+  </div>
+
+</div>
+</body>
+</html>
