@@ -781,33 +781,33 @@ search box - the end user will not know they are happening.
                 var rel = $(this).attr("rel");
                 var href = $(this).attr("href");
                 //if user clicks link in result, assign href and rel with below
-                if (event.toElement.id.indexOf("_topic") > -1){
-                    rel = "topic1_topic"
-                    href = event.toElement.id.match(/topic\d+/g).toString().replace("topic","");
-                    $('#lda').css("display", "block")
-                }
-                else if(event.toElement.id.indexOf("simtitle") > -1){
-                    rel = title_field;
-                    href = event.toElement.id.split("simtitle__")[1]
-                        .replace(/AAA/g,"#").replace(/BBB/g," ").replace(/CCC/g,":").replace(/DDD/g,".")
-                        .replace(/EEE/g,"(").replace(/FFF/g,")").replace(/GGG/g,",");
-                }
-                else if(event.toElement.id.indexOf("simauth") > -1){
-                    rel = author_field;
-                    href = event.toElement.id.split("simauth__")[1]
-                        .replace(/AAA/g,"#").replace(/BBB/g," ").replace(/CCC/g,":").replace(/DDD/g,".")
-                        .replace(/EEE/g,"(").replace(/FFF/g,")").replace(/GGG/g,",").toLowerCase();
-                }
-                else if(event.toElement.id.indexOf("resultauth") > -1){
-                    rel = author_field;
-                    href = event.toElement.id.split("resultauth__")[1]
-                        .replace(/AAA/g,"#").replace(/BBB/g," ").replace(/CCC/g,":").replace(/DDD/g,".")
-                        .replace(/EEE/g,"(").replace(/FFF/g,")").replace(/GGG/g,",").toLowerCase();
-                }
-                else if(event.toElement.id.indexOf("keyword") > -1){
-                    rel = "keywords";
-                    href = event.toElement.id.split("keyword__")[1];
-                }
+                // if (event.toElement.id.indexOf("_topic") > -1){
+                //     rel = "topic1_topic"
+                //     href = event.toElement.id.match(/topic\d+/g).toString().replace("topic","");
+                //     $('#lda').css("display", "block")
+                // }
+                // else if(event.toElement.id.indexOf("simtitle") > -1){
+                //     rel = title_field;
+                //     href = event.toElement.id.split("simtitle__")[1]
+                //         .replace(/AAA/g,"#").replace(/BBB/g," ").replace(/CCC/g,":").replace(/DDD/g,".")
+                //         .replace(/EEE/g,"(").replace(/FFF/g,")").replace(/GGG/g,",");
+                // }
+                // else if(event.toElement.id.indexOf("simauth") > -1){
+                //     rel = author_field;
+                //     href = event.toElement.id.split("simauth__")[1]
+                //         .replace(/AAA/g,"#").replace(/BBB/g," ").replace(/CCC/g,":").replace(/DDD/g,".")
+                //         .replace(/EEE/g,"(").replace(/FFF/g,")").replace(/GGG/g,",").toLowerCase();
+                // }
+                // else if(event.toElement.id.indexOf("resultauth") > -1){
+                //     rel = author_field;
+                //     href = event.toElement.id.split("resultauth__")[1]
+                //         .replace(/AAA/g,"#").replace(/BBB/g," ").replace(/CCC/g,":").replace(/DDD/g,".")
+                //         .replace(/EEE/g,"(").replace(/FFF/g,")").replace(/GGG/g,",").toLowerCase();
+                // }
+                // else if(event.toElement.id.indexOf("keyword") > -1){
+                //     rel = "keywords";
+                //     href = event.toElement.id.split("keyword__")[1];
+                // }
                 //----------------------------------------------------
             }
             var relclean = rel.replace(/\./gi,'_').replace(/\:/gi,'_');
@@ -2183,7 +2183,8 @@ search box - the end user will not know they are happening.
             }
 
             $(toggle_ids).on('click', function (e) {
-                toggleWidgets(e.toElement.id.replace("_toggle",""), e.toElement.id);
+                var id = e.target.id || e.relatedTarget.id || e.toElement.id || function() {console.log("Couldn't attach element id")}
+                toggleWidgets(id.replace("_toggle",""), id);
             })
         });
 

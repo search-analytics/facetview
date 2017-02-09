@@ -1,0 +1,335 @@
+<tr>\
+	<td>Field Name</td>\
+	<td>Award, Solicitation, or Both</td>\
+	<td>NSF, NASA, or Both</td>\
+</tr>\
+<tr>\
+	<td>AgencyContactInfo</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>CFDADescription</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>CFDANumber</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>ClosingDate</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>CompetitionID</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>FundingOpportunityNumber</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>FundingOpportunityTitle</td>\
+	<td>Both</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>FundingOpportunityTitle_unanalyzed</td>\
+	<td>Both</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>InstructionsURL</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>IsMultiProject</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>OfferingAgency</td>\
+	<td>Solicitation</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>OpeningDate</td>\
+	<td>Solicitation</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>SchemaURL</td>\
+	<td>Solicitation</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>abstract</td>\
+	<td>Both</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>agency</td>\
+	<td>Both</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>arra_amount</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>award_amount</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>award_effective_date</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>award_expiration_date</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>award_id</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>award_instrument_value</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>award_title</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>award_title_unanalyzed</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>cfda_number</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>duns_number</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>effective_year</td>\
+	<td>Both</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>estimated_total_amount</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>fund_program_name</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>fund_program_name_unanalyzed</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>institution_address</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>institution_city_name</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>institution_country</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>institution_name</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>institution_phone</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>institution_state</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>institution_state_abbr</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>institution_zip</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>investigator_email</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>investigator_end_date</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>investigator_firstname</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>investigator_fullname</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>investigator_lastname</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>investigator_role_code</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>investigator_start_date</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>max_amd_letter_date</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>min_amd_letter_date</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>obligated_amount</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>org</td>\
+	<td>Both</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>organization_code</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>organization_directorate</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>organization_division</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>performer_district_code</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>pims_id</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>po_name</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>primary_program</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>primary_program_unanalyzed</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>program_element_code</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>program_element_text</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>program_element_text_unanalyzed</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>program_officer</td>\
+	<td>Award</td>\
+	<td>Both</td>\
+</tr>\
+<tr>\
+	<td>program_reference_code</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>program_reference_text</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>program_url</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>synopsis</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>type</td>\
+	<td>Both</td>\
+	<td>NSF</td>\
+</tr>\
+<tr>\
+	<td>url</td>\
+	<td>Award</td>\
+	<td>NSF</td>\
+</tr>\
