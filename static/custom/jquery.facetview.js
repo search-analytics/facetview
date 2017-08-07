@@ -60,6 +60,9 @@ kibana_vizzes = [
 var cat1_color = {
                 "NSF" : "#BFD8BD",
                 "NASA" : "#E9C46A",
+                "DOE": "#F4A261",
+                "DoD": "#EF959D",
+                "NTIS": "#C1E0F7"
                 // "Marine and Terrestrial Ecosystems and Natural Resource Management" : "#F4A261",
                 // "Weather and Air Quality: Minutes to Subseasonal" : "#EF959D",
                 // "Climate Variability and Change: Seasonal to Centennial" : "#C1E0F7",
