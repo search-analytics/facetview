@@ -977,7 +977,7 @@ search box - the end user will not know they are happening.
                 background-color: ' + cat2_color[record.type] +'; border-radius: 6px; text-align: center; font-size: 10pt; "><b style="margin: 6px;">' 
                 + record.type + '</b></span><br>\
                 <b> Category: </b> <span style="display: inline-block; height: 20px; margin: 4px 4px 3px; padding: 4; width: auto; line-height: 20px;\
-                background-color: light blue; border-radius: 6px; text-align: center; font-size: 10pt; "><b style="margin: 6px;">' 
+                background-color: lightblue; border-radius: 6px; text-align: center; font-size: 10pt; "><b style="margin: 6px;">' 
                 + record.category_cs + '</b></span>'
 
             //authors
