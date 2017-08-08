@@ -973,12 +973,12 @@ search box - the end user will not know they are happening.
             result += '<b> Agency: </b> <span style="display: inline-block; height: 20px; margin: 4px 4px 3px; padding: 4; width: auto; line-height: 20px;\
                 background-color: ' + cat1_color[record.org] +'; border-radius: 6px; text-align: center; font-size: 10pt; "><b style="margin: 6px;">' 
                 + record.org + '</b></span>\
-                <b> Category: </b> <span style="display: inline-block; height: 20px; margin: 4px 4px 3px; padding: 4; width: auto; line-height: 20px;\
-                background-color: blue; border-radius: 6px; text-align: center; font-size: 10pt; "><b style="margin: 6px;">' 
-                + record.category_cs + '</b></span>\
                 <span style="display: inline-block; height: 20px; margin: 4px 4px 3px; padding: 4; width: auto; line-height: 20px;\
                 background-color: ' + cat2_color[record.type] +'; border-radius: 6px; text-align: center; font-size: 10pt; "><b style="margin: 6px;">' 
-                + record.type + '</b></span><br>'
+                + record.type + '</b></span><br>\
+                <b> Category: </b> <span style="display: inline-block; height: 20px; margin: 4px 4px 3px; padding: 4; width: auto; line-height: 20px;\
+                background-color: light blue; border-radius: 6px; text-align: center; font-size: 10pt; "><b style="margin: 6px;">' 
+                + record.category_cs + '</b></span>'
 
             //authors
             // result += ' <b style=" display: inline-block; float: left; width: 145px;"> Authors: </b> <div style="display: inline-block; width: 700px;">';
