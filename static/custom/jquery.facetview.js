@@ -17,44 +17,44 @@ ldavis_initial = true;
 
 //Automatically embed Kibana visualizations (using url from "share" option in Kibana interface) in iFrames
 kibana_vizzes = [
-    // {
-    //     "src": "https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Funding-Opportunities-by-Total-Award-Amount?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-37y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(exclude:(pattern:n%2Fa),field:FundingOpportunityTitle_unanalyzed,order:desc,orderBy:'1',size:30),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,mode:stacked,shareYAxis:!t),type:histogram))",
-    //     "label": "Funding Opportunities by Total Award Amount"
-    // },
-    // {
-    //     "src": "https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Highest-Funded-Investigators?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-37y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:investigator_fullname,order:desc,orderBy:'1',size:25),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,mode:stacked,shareYAxis:!t),type:histogram))",
-    //     "label": "Highest Funded Investigators"
-    // },
+    {
+        "src": "http://atlas-kibana.dyndns.org/#/visualize/edit/Funding-Opportunities-by-Total-Award-Amount?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(exclude:(pattern:n%2Fa),field:FundingOpportunityTitle_unanalyzed,order:desc,orderBy:'1',size:30),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),type:histogram))",
+        "label": "Funding Opportunities by Total Award Amount"
+    },
+    {
+        "src": "http://atlas-kibana.dyndns.org/#/visualize/edit/Highest-Funded-Investigators?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(exclude:(pattern:'N%2FA%20N%2FA'),field:investigator_fullname,order:desc,orderBy:'1',size:29),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),type:histogram))",
+        "label": "Highest Funded Investigators"
+    },
     {
         "src": "http://atlas-kibana.dyndns.org/#/visualize/edit/Total-Yearly-Awards-for-NASA-and-NSF?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(customInterval:'2h',extended_bounds:(),field:award_effective_date,interval:y,min_doc_count:1),schema:segment,type:date_histogram),(id:'3',params:(field:org,order:desc,orderBy:'1',size:5),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,drawLinesBetweenPoints:!t,interpolate:linear,radiusRatio:9,scale:linear,setYExtents:!f,shareYAxis:!t,showCircles:!t,smoothLines:!f,times:!(),yAxis:()),type:line))",
         "label": "Total Yearly Awards"
     }
-    // {
-    //     "src":"https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Award-Amount-by-State?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:institution_state_abbr,order:desc,orderBy:'1',size:50),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,mode:stacked,shareYAxis:!t),type:histogram))",
-    //     "label": "Award Amount by State"
-    // },
-    // {
-    //     "src":"https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Award-Amount-by-State-and-Institution?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-100y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:institution_state_abbr,order:desc,orderBy:'1',size:50),schema:segment,type:terms),(id:'3',params:(field:institution_name,order:desc,orderBy:'1',size:10),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,mode:stacked,shareYAxis:!t),type:histogram))",
-    //     "label": "Top 10 Institutions by State (Award Amount)",
-    //     "note": "*Bars do not represent total for each state, they are only the total for the top 10 institutions shown."
-    // },
-    // {
-    //     "src": "https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Award-Amount-by-Institution?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:institution_name,order:desc,orderBy:'1',size:25),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,mode:stacked,shareYAxis:!t),type:histogram))",
-    //     "label": "Award Amount by Institution"
-    // },
-    // {
-    //     "src": "https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Award-Amount-by-Institution-and-PI?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:institution_name,order:desc,orderBy:'1',size:25),schema:segment,type:terms),(id:'3',params:(field:investigator_fullname,order:desc,orderBy:'1',size:10),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,mode:stacked,shareYAxis:!t),type:histogram))",
-    //     "label": "Top 10 Investigators by Institution (Award Amount)",
-    //     "note": "*Bars do not represent total for each institution, they are only the total for the top 10 investigators shown."
-    // },
-    // {
-    //     "src": "https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Award-Info?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'%22california%20institute%20of%20technology%22')),vis:(aggs:!((id:'2',params:(field:award_title_unanalyzed,order:desc,orderBy:'6',size:5000),schema:bucket,type:terms),(id:'3',params:(field:institution_name,order:desc,orderBy:'6',size:5000),schema:bucket,type:terms),(id:'4',params:(field:award_effective_date,order:desc,orderBy:'6',size:5000),schema:bucket,type:terms),(id:'5',params:(field:FundingOpportunityTitle_unanalyzed,order:desc,orderBy:'6',size:5000),schema:bucket,type:terms),(id:'6',params:(field:award_amount),schema:metric,type:sum),(id:'1',params:(),schema:metric,type:count),(id:'7',params:(field:org,order:desc,orderBy:'6',size:5000),schema:bucket,type:terms)),listeners:(),params:(perPage:10,showMeticsAtAllLevels:!f,showPartialRows:!f),type:table))",
-    //     "label": "Award Detail"
-    // },
-    // {
-    //     "src": "https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Awardees-from-both-NASA-and-NSF?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'6',params:(),schema:metric,type:count),(id:'2',params:(field:investigator_fullname,order:desc,orderBy:'1',size:10000),schema:bucket,type:terms),(id:'4',params:(field:award_amount),schema:metric,type:sum),(id:'1',params:(field:org),schema:metric,type:cardinality),(id:'5',params:(field:org,order:desc,orderBy:'1',size:2),schema:bucket,type:terms)),listeners:(),params:(perPage:10,showMeticsAtAllLevels:!f,showPartialRows:!f),type:table))",
-    //     "label": "Winners of both NASA and NSF Awards"
-    // }
+    {
+        "src":"http://atlas-kibana.dyndns.org/#/visualize/edit/Award-Dollars-by-State?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:institution_state_abbr,order:desc,orderBy:'1',size:50),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),type:histogram))",
+        "label": "Award Amount by State"
+    },
+    {
+        "src":"http://atlas-kibana.dyndns.org/#/visualize/edit/Award-Amount-by-State-and-Institution?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:institution_state_abbr,order:desc,orderBy:'1',size:50),schema:segment,type:terms),(id:'3',params:(field:institution_name,order:desc,orderBy:'1',size:10),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),type:histogram))",
+        "label": "Top 10 Institutions by State (Award Amount)",
+        "note": "*Bars do not represent total for each state, they are only the total for the top 10 institutions shown."
+    },
+    {
+        "src": "http://atlas-kibana.dyndns.org/#/visualize/edit/Award-Amount-by-Institution?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:institution_name,order:desc,orderBy:'1',size:30),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),type:histogram))",
+        "label": "Award Amount by Institution"
+    },
+    {
+        "src": "http://atlas-kibana.dyndns.org/#/visualize/edit/Award-Amount-by-Institution-and-PI?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:institution_name,order:desc,orderBy:'1',size:30),schema:segment,type:terms),(id:'3',params:(field:investigator_fullname,order:desc,orderBy:'1',size:10),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),type:histogram))",
+        "label": "Top 10 Investigators by Institution (Award Amount)",
+        "note": "*Bars do not represent total for each institution, they are only the total for the top 10 investigators shown."
+    },
+    {
+        "src": "http://atlas-kibana.dyndns.org/#/visualize/edit/Spend-by-Category?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(field:category_cs,order:desc,orderBy:'1',size:10),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),type:histogram))",
+        "label": "Total Award Amounts by IT Category"
+    },
+    {
+        "src": "http://atlas-kibana.dyndns.org/#/visualize/edit/Spend-Trend-by-IT-Category?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(customInterval:'2h',extended_bounds:(),field:award_effective_date,interval:auto,min_doc_count:1),schema:segment,type:date_histogram),(id:'3',params:(field:category_cs,order:desc,orderBy:'1',size:7),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,drawLinesBetweenPoints:!t,interpolate:linear,radiusRatio:9,scale:linear,setYExtents:!f,shareYAxis:!t,showCircles:!t,smoothLines:!f,times:!(),yAxis:()),type:line))",
+        "label": "Award Amount Trends by IT Category"
+    }
 ]
 
 var cat1_color = {
