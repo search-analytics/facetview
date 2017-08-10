@@ -2223,7 +2223,11 @@ search box - the end user will not know they are happening.
                     //Handle faceted terms
                     if(Object.keys(qry_obj.query.bool.must[x]).indexOf("term") > -1){
                         field = Object.keys(qry_obj.query.bool.must[x].term)[0];
+                        console.log("FIELD")
+                        console.log(field)
                         value = qry_obj.query.bool.must[x].term[field].replaceAll(" ","%20").replaceAll("\\(","%28").replaceAll("\\)","%29").replaceAll(":","%3A");
+                        console.log("VALUE")
+                        console.log(value)
                         values.push(value);
 
                         rison_obj.filters = rison_obj.filters.concat(rison.decode('!((meta:(disabled:!f,index:search-analytics,key:' + field +
