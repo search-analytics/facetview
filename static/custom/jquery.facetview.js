@@ -26,7 +26,7 @@ kibana_vizzes = [
         "label": "Highest Funded Investigators"
     },
     {
-        "src": "https://search-atlas-es15-rtj4sfbg5avikc2shnvbcj7bva.us-west-1.es.amazonaws.com/_plugin/kibana/#/visualize/edit/Total-Yearly-Awards-for-NASA-and-NSF?embed&_g=(refreshInterval:(display:Off,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(extended_bounds:(),field:award_effective_date,interval:year,min_doc_count:1),schema:segment,type:date_histogram),(id:'3',params:(field:org,order:desc,orderBy:'1',size:5),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,shareYAxis:!t),type:line))",
+        "src": "http://atlas-kibana.dyndns.org/#/visualize/edit/Total-Yearly-Awards-for-NASA-and-NSF?embed&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-40y,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:award_amount),schema:metric,type:sum),(id:'2',params:(customInterval:'2h',extended_bounds:(),field:award_effective_date,interval:y,min_doc_count:1),schema:segment,type:date_histogram),(id:'3',params:(field:org,order:desc,orderBy:'1',size:5),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,drawLinesBetweenPoints:!t,interpolate:linear,radiusRatio:9,scale:linear,setYExtents:!f,shareYAxis:!t,showCircles:!t,smoothLines:!f,times:!(),yAxis:()),type:line))",
         "label": "Total Yearly Awards"
     },
     {
