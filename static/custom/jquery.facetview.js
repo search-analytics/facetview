@@ -965,7 +965,9 @@ search box - the end user will not know they are happening.
             //automatically add title and author fields (based on global vars)
 
             if(record.type == "solicitation"){
-                title_field = "FundingOpportunityTitle"
+                title_field = "FundingOpportunityTitle";
+            } else{
+                title_field = "award_title";
             }
 
             //title
