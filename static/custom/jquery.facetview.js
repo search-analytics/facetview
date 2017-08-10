@@ -2225,7 +2225,7 @@ search box - the end user will not know they are happening.
                         field = Object.keys(qry_obj.query.bool.must[x].term)[0];
                         console.log("FIELD")
                         console.log(field)
-                        value = qry_obj.query.bool.must[x].term[field].replaceAll(" ","%20").replaceAll("\\(","%28").replaceAll("\\)","%29").replaceAll(":","%3A");
+                        value = qry_obj.query.bool.must[x].term[field].replaceAll(" ","%20").replaceAll("\\(","%28").replaceAll("\\)","%29").replaceAll(":","%3A").replaceAll(",","%2C");
                         console.log("VALUE")
                         console.log(value)
                         values.push(value);
